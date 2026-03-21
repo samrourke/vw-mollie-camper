@@ -1,0 +1,152 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 99;
+  background-color: var(--teal);
+
+
+  
+}
+
+/* .logoWrap {
+  position: absolute;
+  left: var(--paddingLR);
+  top:2px;
+  border-radius: 999px;
+  
+
+
+} */
+
+.logoWrap{
+  position: relative;
+  transform: translateY(12%);
+}
+.logo {
+  height:180px;
+  width: auto;
+
+}
+
+/* Burger Button */
+.toggleButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  margin-right: var(--paddingLR);
+}
+
+.toggleButton span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--cream);
+  border-radius: 2px;
+  transition: all 0.35s ease;
+}
+
+.toggleButton.open span:nth-child(2) {
+  opacity: 0;
+}
+.toggleButton.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6.5px);
+}
+.toggleButton.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6.5px);
+}
+
+/* Desktop Nav */
+.desktopNav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  height:100%;
+  margin:0 auto;
+}
+
+.desktopNav li {
+  position: relative;
+  color: var(--cream);
+  font-weight: 400;
+ 
+  
+  transition: color 0.3s ease;
+  
+}
+
+.desktopNav li h3{
+
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+   text-shadow: 2px 2px 0px var(--gold);
+  font-size: 2rem;
+}
+
+.desktopNav li::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--cream);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.desktopNav li:hover::after {
+  transform: scaleX(1);
+}
+
+/* Mobile Nav (animated overlay) */
+.mobileNav {
+  position: fixed;
+  inset: 0;
+  background: var(--gold);
+  backdrop-filter: blur(8px);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  color:var(--cream);
+  z-index: 90;
+}
+
+@media (max-width: 860px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .toggleButton {
+    display: flex;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .mobileNav {
+    display: flex;
+  }
+}

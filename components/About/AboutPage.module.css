@@ -1,0 +1,362 @@
+
+
+.container {
+  width: min(1200px, calc(100% - 3rem));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.storySection {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.aboutSection{
+ 
+background: linear-gradient(
+    180deg,
+     #f6edd7  0%,
+    rgba(245, 235, 209, 0.55) 100%
+  );
+
+  
+}
+
+.offerSection {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 235, 209, 0.55) 0%,
+    #f6edd7 100%
+  );
+
+}
+
+.offerSection::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    transform: translateY(50%);
+    z-index: 99;
+    width:100vw;
+    height:100px;
+    background: linear-gradient(
+    180deg,
+    rgba(245, 235, 209, s) 0%,
+    rgba(245, 235, 209, 0) 100%
+  );
+}
+
+.sectionTextureTop,
+.sectionTextureBottom {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+}
+
+.sectionTextureTop {
+  background:
+    radial-gradient(circle at 12% 30%, rgba(245, 197, 93, 0.45), transparent 18%),
+    radial-gradient(circle at 15% 80%, rgba(234, 137, 71, 0.28), transparent 24%);
+}
+
+.sectionTextureBottom {
+  background:
+    radial-gradient(circle at 88% 70%, rgba(99, 170, 163, 0.32), transparent 24%),
+    radial-gradient(circle at 15% 85%, rgba(239, 170, 89, 0.22), transparent 22%);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 5rem);
+  align-items: center;
+}
+
+.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.storyCopy {
+  max-width: 38rem;
+}
+
+.sectionTitle {
+  margin: 0 0 1.5rem;
+  max-width: 12ch;
+  font-size: var(--fs-h1);
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+  color:var(--dark-teal);
+}
+
+.storyCopy p:not(.sectionLabel) {
+  margin: 0 0 1.2rem;
+ 
+  line-height: 1.9;
+  color: rgba(36, 67, 64, 0.9);
+}
+
+.mediaWrap {
+  position: relative;
+}
+
+.imageCard {
+  position: relative;
+  aspect-ratio: 0.92 / 1;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(37, 61, 59, 0.16);
+  border: 1px solid rgba(42, 114, 111, 0.12);
+  background: #f6ecd8;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.whatRibbon, .whoRibbon{
+position: absolute;
+
+  z-index: 2;
+  pointer-events: none;
+
+}
+
+.whoRibbon{
+     bottom: 0;
+  left: 0rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.whatRibbon {
+ bottom: 0;
+  left: 0rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  /* transform: translate(30%, -10%) rotate(10deg); */
+}
+
+.whatRibbon > img{
+     transform: translate(-5%, -10%) rotate(6deg);
+}
+
+.whoRibbon >img{
+       transform: translate(-5%, -10%) rotate(6deg);
+}
+
+
+
+.bannerImg{
+    position: relative;
+    /* transform: translate(30%, -10%) rotate(10deg); */
+    width:50%;
+}
+
+
+.expectSection {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.expectIntro {
+  max-width: 46rem;
+  margin-bottom: 2rem;
+}
+
+.expectText {
+  margin: 0;
+ 
+  line-height: 1.85;
+  color: rgba(36, 67, 64, 0.88);
+}
+
+.cardRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.infoCard {
+  padding: 1.5rem;
+  border-radius: 1.6rem;
+  background: rgba(248, 242, 226, 0.92);
+  border: 1px solid rgba(42, 114, 111, 0.12);
+  box-shadow: 0 14px 30px rgba(40, 60, 58, 0.08);
+}
+
+.infoCard h3 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
+  line-height: 1.05;
+  color: #2a726f;
+}
+
+.infoCard p {
+  margin: 0;
+  line-height: 1.75;
+  color: rgba(36, 67, 64, 0.82);
+}
+
+.ctaSection {
+  padding: 0 0 clamp(4rem, 8vw, 7rem);
+}
+
+.ctaCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(246, 237, 215, 0.96) 0%,
+    rgba(211, 230, 222, 0.92) 100%
+  );
+  border: 1px solid rgba(42, 114, 111, 0.12);
+  box-shadow: 0 20px 50px rgba(38, 60, 58, 0.1);
+}
+
+.ctaCopy {
+  max-width: 42rem;
+}
+
+.ctaTitle {
+  margin: 0 0 1rem;
+  max-width: 14ch;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 0.96;
+  color: #2a726f;
+}
+
+.ctaText {
+  margin: 0;
+  font-size: clamp(1rem, 1.3vw, 1.08rem);
+  line-height: 1.8;
+  color: rgba(36, 67, 64, 0.88);
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.4rem;
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.primaryButton {
+  background: #d38d46;
+  color: #fff8ee;
+  box-shadow: 0 12px 24px rgba(211, 141, 70, 0.28);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  background: #c97f36;
+}
+
+.secondaryButton {
+  background: rgba(42, 114, 111, 0.12);
+  color: #2a726f;
+  border: 1px solid rgba(42, 114, 111, 0.18);
+}
+
+.secondaryButton:hover {
+  transform: translateY(-2px);
+  background: rgba(42, 114, 111, 0.18);
+}
+
+@media (max-width: 1100px) {
+  .cardRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ctaCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 900px) {
+  .storyGrid,
+  .reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .mediaWrap {
+    order: 2;
+  }
+
+  .storyCopy {
+    order: 1;
+    max-width: none;
+  }
+
+  .sectionTitle,
+  .ctaTitle {
+    max-width: 14ch;
+  }
+
+  .imageCard {
+    aspect-ratio: 1.05 / 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 1.5rem, 1200px);
+  }
+
+  .hero {
+    padding: 6.5rem 0 4rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.8rem, 14vw, 4.8rem);
+    max-width: 11ch;
+  }
+
+  .sectionTitle {
+    font-size: clamp(2.3rem, 12vw, 4rem);
+  }
+
+  .cardRow {
+    grid-template-columns: 1fr;
+  }
+
+  .imageCard {
+    border-radius: 1.5rem;
+  }
+
+  .ctaActions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}

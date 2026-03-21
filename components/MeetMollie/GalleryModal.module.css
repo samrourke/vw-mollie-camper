@@ -1,0 +1,132 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--cream);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.modal {
+  position: relative;
+  width: min(1200px, 100%);
+  height: min(88vh, 900px);
+  display: grid;
+  place-items: center;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.modalImage {
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--dark-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--dark-teal);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.navContainer{
+  position: absolute;
+  
+  height: 100px;
+  padding: 1rem;
+  width:100vw;
+}
+
+.nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transform: translateY(-50%);
+  color: var(--dark-teal);
+  font-size: 1.8rem;
+  cursor: pointer;
+  background: var(--cream);
+  border: 1px solid var(--teal);
+  aspect-ratio: 1/1;
+  width:60px;
+  height: 60px;
+  border-radius: 999px;
+}
+
+.prev {
+  left: 3rem;
+}
+
+.next {
+  right: 3rem;
+}
+
+.counter {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--dark-teal);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 840px) {
+  .modal {
+    height: min(78vh, 700px);
+  }
+  .navContainer{
+    bottom: 0;
+    width: 60%;
+  }
+
+  .nav, .close {
+    width: 46px;
+    height: 46px;
+    font-size: 1.25rem;
+    bottom:0;
+   
+    
+  }
+  .close{
+    top:1rem;
+    right:1rem;
+  
+  }
+
+  .prev {
+    left: 0.5rem;
+  }
+
+  .next {
+    right: 0.5rem;
+  }
+
+ 
+  .counter {
+    bottom: -1.8rem;
+    font-size: 0.85rem;
+  }
+}

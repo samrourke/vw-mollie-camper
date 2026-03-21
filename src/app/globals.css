@@ -1,42 +1,312 @@
+/* ============================================================
+   GLOBALS.CSS  —  Base reset & design tokens
+   Override --font-sans, --background, --foreground, --accent
+   per project in your project-level CSS file.
+   ============================================================ */
+
+/* ── Design Tokens ────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colours — override per project */
+  --background:   #ffffff;
+  --foreground:   #171717;
+ 
+
+
+--gold: #C68B4Eff;
+--gold-dark:  #9e6930;  
+--gold-hover: #d4995a;  
+--teal: #7C9D93ff;
+--mid-teal: #4B766Fff;
+--dark-teal: #386962ff;
+--black: #000000ff;
+--cream: rgb(255, 254, 235);
+--camel: #C18F57ff;
+--black-3: #000000ff;
+
+/*New Palette*/
+
+
+
+  /* Typography */
+  --font-sans:    Arial, Helvetica, sans-serif;
+  --font-serif:   Georgia, serif;
+  --font-mono:    ui-monospace, 'Cascadia Code', monospace;
+
+
+  /* Fluid type scale */
+  --fs-h1:    clamp(2.6rem,  2rem + 4vw,   6rem);
+  --fs-h2:    clamp(2.4rem,  1.4rem + 2.2vw, 3.2rem);
+  --fs-h3:    clamp(1.6rem,  1.2rem + 1vw,   2.2rem);
+  --fs-h4:    clamp(1.3rem,  1.05rem + 1vw,  2rem);
+  --fs-h5:    clamp(1.1rem,  1rem + 0.6vw,   1.6rem);
+  --fs-h6:    clamp(1rem,    0.9rem + 0.4vw, 1.3rem);
+  --fs-body:  clamp(1.2rem,    1rem + 0.3vw, 1.15rem);
+  --fs-small: clamp(0.8rem,  0.75rem + 0.2vw, 0.9rem);
+
+  /* Spacing */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  2rem;
+  --space-xl:  4rem;
+  --space-2xl: 8rem;
+  --paddingLR:clamp(12px, 3vw, 30px);
+  --paddingTB:clamp(12px, 3vw, 28px);
+
+  /* Transitions */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 200ms;
+}
+
+
+/* - TITLES - */
+
+.sectionTitle{
+
+ 
+  max-width: 12ch;
+  font-family: var(--font-retro);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  color: var(--dark-teal);
+  text-shadow: 2px 2px 0px var(--gold);
+
+
+}
+
+/* ── BUTTON ── */
+
+.cta {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 1.1em 1.8em;
+  background: var(--gold);
+  border: 2px solid var(--gold-dark);
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition:
+    background 150ms cubic-bezier(0, 0, 0.58, 1),
+    transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.cta::before {
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gold-dark);
+  border-radius: inherit;
+  box-shadow:
+    0 0 0 2px var(--gold-dark),
+    0 0.625em 0 0 var(--gold-dark);
+  transform: translate3d(0, 0.2em, -0.5em);
+  transition:
+    transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.cta:hover {
+  background: var(--gold-hover);
+  transform: translate(0, 0.1em);
+}
+
+.cta:hover::before {
+  box-shadow:
+    0 0 0 2px var(--gold-dark),
+    0 0.5em 0 0 var(--gold-dark);
+  transform: translate3d(0, 0.1em, -1em);
+}
+
+.cta:active {
+  background: var(--gold-hover);
+  transform: translate(0, 0.75em);
+}
+
+.cta:active::before {
+  box-shadow:
+    0 0 0 2px var(--gold-dark),
+    0 0 var(--gold-dark);
+  transform: translate3d(0, 0, -1em);
+}
+
+/* ── Teal variant ── */
+
+.cta_teal {
+  background: var(--mid-teal);
+  border-color: var(--dark-teal);
+}
+
+.cta_teal::before {
+  background: var(--dark-teal);
+  box-shadow:
+    0 0 0 2px var(--dark-teal),
+    0 0.625em 0 0 var(--dark-teal);
+}
+
+.cta_teal:hover {
+  background: var(--teal);
+}
+
+.cta_teal:hover::before {
+  box-shadow:
+    0 0 0 2px var(--dark-teal),
+    0 0.5em 0 0 var(--dark-teal);
+  transform: translate3d(0, 0.1em, -1em);
+}
+
+.cta_teal:active {
+  background: var(--teal);
+}
+
+.cta_teal:active::before {
+  box-shadow:
+    0 0 0 2px var(--dark-teal),
+    0 0 var(--dark-teal);
+  transform: translate3d(0, 0, -1em);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #171717;
+    --foreground:  #ededed;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
+
+/* ── Box Model ────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ── Document ─────────────────────────────────────────────── */
+html {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+  background:  var(--background);
+  color:       var(--foreground);
+  font-family: var(--font-sans);
+  font-size:   var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing:  antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+section{
+  width:100%;
 }
 
+
+/* ── Typography ───────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5em;
+  font-family: var(--font-retro);
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+h5 { font-size: var(--fs-h5); }
+h6 { font-size: var(--fs-h6); }
+
+p {
+  font-size: var(--fs-body);
+  font-family: var(--work-sans), sans-serif;
+ line-height: 1.75;
+  letter-spacing: 0.05em;
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+p:last-child { margin-bottom: 0; }
+
+strong { font-weight: 600; }
+em     { font-style: italic; }
+
+small { font-size: var(--fs-small); }
+
+
+/* ── Links ────────────────────────────────────────────────── */
 a {
   color: inherit;
   text-decoration: none;
 }
+a:hover { text-decoration: none; }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+
+/* ── Lists ────────────────────────────────────────────────── */
+ul, ol {
+  list-style: none;
+}
+
+
+/* ── Media ────────────────────────────────────────────────── */
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+img, video {
+  height: auto;
+}
+
+
+/* ── Forms ────────────────────────────────────────────────── */
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+textarea {
+  resize: vertical;
+}
+
+
+/* ── Misc ─────────────────────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid currentColor;
+  opacity: 0.15;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
