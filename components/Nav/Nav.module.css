@@ -34,6 +34,36 @@
 
 }
 
+.mobileTitleWrap{
+   position: absolute;
+  width:100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+}
+
+.mobileLogoWrap{
+  position: absolute;
+  width:100%;
+  display: none;
+  
+}
+
+.mobileLogo{
+  height:80px;
+  width:auto;
+  margin-left: 1rem;
+}
+
+.mobileTitle{
+  color:var(--cream);
+  letter-spacing: 0.02em;
+  font-weight: 200;
+  margin: 0;
+}
+
+
 /* Burger Button */
 .toggleButton {
   display: none;
@@ -136,6 +166,17 @@
 @media (max-width: 860px) {
   .desktopNav {
     display: none;
+  }
+
+  .mobileLogoWrap{
+    display: flex;
+    align-items: center;
+    gap:2rem
+
+  }
+
+  .mobileTitleWrap{
+    display: flex;
   }
 
   .toggleButton {

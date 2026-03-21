@@ -84,6 +84,13 @@ export default function Navbar({
         <span />
       </button>
 
+      <Link key="mobileLogo" href="/" className={styles.mobileLogoWrap}>
+        <img src={logo} alt="Site logo" className={styles.mobileLogo} />
+      </Link>
+      <div className={styles.mobileTitleWrap}>
+        <h3 className={styles.mobileTitle}>Rock The Bus</h3>
+      </div>
+
       {/* Desktop Nav */}
       <ul className={styles.desktopNav}>
         {links.map((link, i) =>

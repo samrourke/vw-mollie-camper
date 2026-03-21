@@ -1,10 +1,28 @@
 .section {
-  position: relative;
+   position: relative;
   padding: clamp(5rem, 8vw, 8rem) 2rem;
   overflow: hidden;
   background: url("/images/sunset-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 400px; /* adjust */
+
+  pointer-events: none;
+  z-index: 2;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #f6edd7 100%
+  );
 }
 
 .container {
@@ -112,11 +130,14 @@
 
 
 .bottom {
-  margin-top: 4rem;
+    position: relative;
+  margin: 6rem auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem 3rem;
   max-width: 1000px;
+  z-index: 3;
+  
 }
 
 .infoBlock {
