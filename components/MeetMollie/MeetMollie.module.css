@@ -142,6 +142,7 @@
 
 .infoBlock {
   max-width: 32rem;
+  /* color: var(--dark-teal); */
 }
 
 .infoBlock p + p {

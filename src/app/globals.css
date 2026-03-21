@@ -182,12 +182,12 @@
   transform: translate3d(0, 0, -1em);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #171717;
     --foreground:  #ededed;
   }
-}
+} */
 
 
 /* ── Box Model ────────────────────────────────────────────── */
