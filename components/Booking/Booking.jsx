@@ -41,7 +41,7 @@ export default function Booking() {
 
               <div className={styles.detailItem}>
                 <span className={styles.detailLabel}>Covering</span>
-                <p className={styles.detailText}>Kent and the South East</p>
+                <p className={styles.detailText}>London and the South</p>
               </div>
             </div>
 

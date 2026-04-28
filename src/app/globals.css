@@ -249,6 +249,13 @@ p {
   margin-bottom: 1em;
   font-weight: 500;
 }
+
+
+h2, h3, h4{
+      letter-spacing: 0.02em;
+    font-weight: 400;
+}
+
 p:last-child { margin-bottom: 0; }
 
 strong { font-weight: 600; }

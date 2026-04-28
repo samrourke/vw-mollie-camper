@@ -18,8 +18,10 @@ export default function Navbar({
   links = [
     { href: "/", label: "Home" },
     { href: "/#meet-mollie", label: "Mollie" },
+    { href: "/#gallery", label: "Gallery" },
     { href: "/", label: "Logo", image: "/icon.png" },
-    { href: "/#about", label: "About Us" },
+    { href: "/#reviews", label: "Reviews" },
+    { href: "/#about", label: "About" },
     { href: "/#contact", label: "Contact" },
   ],
   accentColor = "var(--teal)",

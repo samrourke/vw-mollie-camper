@@ -2,131 +2,189 @@
   position: fixed;
   inset: 0;
   z-index: 2000;
-  background: var(--cream);
-  backdrop-filter: blur(8px);
+  background: rgba(24, 32, 32, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   display: grid;
   place-items: center;
-  padding: 1rem;
+  padding: clamp(1rem, 2vw, 2rem);
 }
 
 .modal {
   position: relative;
-  width: min(1200px, 100%);
-  height: min(88vh, 900px);
+  width: min(1240px, 100%);
+  height: min(88vh, 920px);
   display: grid;
-  place-items: center;
+  grid-template-rows: 1fr auto;
+  gap: 1rem;
 }
 
 .imageWrap {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 1.5rem;
+  min-height: 0;
+  border-radius: 28px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(248, 244, 236, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.24),
+    0 6px 24px rgba(0, 0, 0, 0.14);
 }
 
 .modalImage {
-  object-fit: contain;
+  object-fit: cover;
+}
+
+/* optional subtle overlay to unify images */
+.imageWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.04) 22%,
+      rgba(0, 0, 0, 0.02) 100%
+    );
 }
 
 .close {
   position: absolute;
-  top: 1rem;
-  right: 3rem;
-  z-index: 3;
-  width: 60px;
-  height: 60px;
-  border: 1px solid var(--dark-teal);
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 5;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
-  color: var(--dark-teal);
-  font-size: 2rem;
+  background: rgba(18, 24, 24, 0.38);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--cream);
+  font-size: 1.5rem;
   line-height: 1;
   cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.navContainer{
-  position: absolute;
-  
-  height: 100px;
-  padding: 1rem;
-  width:100vw;
+.close:hover {
+  transform: scale(1.05);
+  background: rgba(18, 24, 24, 0.54);
+  border-color: rgba(255, 255, 255, 0.36);
+}
+
+.navContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  min-height: 64px;
 }
 
 .nav {
-  position: absolute;
-  display: flex;
+  position: relative;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   z-index: 3;
-  transform: translateY(-50%);
-  color: var(--dark-teal);
-  font-size: 1.8rem;
+  color: var(--cream);
+  font-size: 1.15rem;
   cursor: pointer;
-  background: var(--cream);
-  border: 1px solid var(--teal);
-  aspect-ratio: 1/1;
-  width:60px;
-  height: 60px;
+  background: rgba(18, 24, 24, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 52px;
+  height: 52px;
   border-radius: 999px;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.prev {
-  left: 3rem;
+.nav:hover {
+  transform: scale(1.05);
+  background: rgba(18, 24, 24, 0.58);
+  border-color: rgba(255, 255, 255, 0.34);
 }
 
+.prev,
 .next {
-  right: 3rem;
+  left: auto;
+  right: auto;
+  transform: none;
 }
 
 .counter {
-  position: absolute;
-  bottom: -2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--dark-teal);
+  position: relative;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  min-width: 110px;
+  text-align: center;
+  color: rgba(255, 245, 215, 0.86);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* optional caption styling if you add one later */
+.caption {
+  color: rgba(255, 245, 215, 0.82);
   font-size: 0.95rem;
-  letter-spacing: 0.08em;
+  text-align: center;
 }
 
 @media (max-width: 840px) {
-  .modal {
-    height: min(78vh, 700px);
-  }
-  .navContainer{
-    bottom: 0;
-    width: 60%;
+  .overlay {
+    padding: 0.75rem;
   }
 
-  .nav, .close {
+  .modal {
+    width: 100%;
+    height: min(84vh, 760px);
+    gap: 0.75rem;
+  }
+
+  .imageWrap {
+    border-radius: 22px;
+  }
+
+  .close {
+    top: 0.85rem;
+    right: 0.85rem;
     width: 46px;
     height: 46px;
-    font-size: 1.25rem;
-    bottom:0;
-   
-    
-  }
-  .close{
-    top:1rem;
-    right:1rem;
-  
+    font-size: 1.2rem;
   }
 
-  .prev {
-    left: 0.5rem;
+  .navContainer {
+    gap: 0.75rem;
+    min-height: 56px;
   }
 
-  .next {
-    right: 0.5rem;
+  .nav {
+    width: 46px;
+    height: 46px;
+    font-size: 1rem;
   }
 
- 
   .counter {
-    bottom: -1.8rem;
-    font-size: 0.85rem;
+    min-width: 90px;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
   }
 }

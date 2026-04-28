@@ -38,8 +38,8 @@ export default function Hero() {
           </div>
 
           <p className={styles.meta}>
-            Available for weddings, events and styled shoots across Kent and the
-            South East
+            Available for weddings, events and styled shoots across London and
+            the South.
           </p>
         </div>
 

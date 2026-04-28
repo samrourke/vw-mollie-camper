@@ -4,6 +4,7 @@ import Hero from "../../components/Hero/Hero";
 import MeetMollie from "../../components/MeetMollie/MeetMollie";
 import AboutPage from "../../components/About/AboutPage";
 import Booking from "../../components/Booking/Booking";
+import GallerySection from "../../components/Gallery/GallerySection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <MeetMollie />
         <AboutPage />
+        <GallerySection />
         <Booking />
       </main>
     </div>
