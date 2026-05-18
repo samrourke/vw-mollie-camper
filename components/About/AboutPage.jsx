@@ -45,7 +45,7 @@ export default function AboutPage() {
                 part of the occasion rather than just the travel in between.
               </p> */}
               <p>
-                We feel incredibly lucky to share our beautiful camper, Mollie,
+                I feel incredibly lucky to share this beautiful camper, Mollie,
                 with couples on one of the most memorable days of their lives.
                 And after all, life is too short not to ride in a classic VW
                 split screen!
@@ -61,8 +61,8 @@ export default function AboutPage() {
               </div>
               <div className={styles.imageCard}>
                 <Image
-                  src="/images/vw 20.jpg"
-                  alt="Mollie the vintage VW camper van parked outdoors"
+                  src="/images/edits/andy-ps.png"
+                  alt="Andy, the owner of Rock The Bus, standing next to Mollie, the vintage VW camper van, in a sunny outdoor setting"
                   fill
                   className={styles.image}
                 />
@@ -84,7 +84,7 @@ export default function AboutPage() {
               </div>
               <div className={styles.imageCard}>
                 <Image
-                  src="/images/vw 10.jpg"
+                  src="/images/edits/couple-06.png"
                   alt="Classic VW wedding camper van ready for a special occasion"
                   fill
                   className={styles.image}
@@ -100,15 +100,16 @@ export default function AboutPage() {
               </p>
               <p>
                 She’ll arrive to collect those about to be wed, along with a
-                special friend or family member if needed, and take them to the
-                ceremony in a relaxed and unhurried way giving everyone a moment
-                to breathe before everything begins.
+                special friend, pet or family member if needed and take them to
+                the ceremony in a relaxed and unhurried. We like to give
+                everyone a moment here to breathe and enjoy the ride before
+                everything begins.
               </p>
               <p>
                 Afterwards, she can whisk the newlyweds off to the celebration
-                and, if you’d like, she can stay a little longer for
-                photographs. Mollie loves being part of the occasion and is
-                always very happy to have her picture taken.
+                and then she can stay a while longer for photographs. Mollie
+                loves being part of the occasion and is always very happy to
+                have her picture taken.
               </p>
               {/* <p>
                 Whether it’s the arrival, the journey itself, or those lovely

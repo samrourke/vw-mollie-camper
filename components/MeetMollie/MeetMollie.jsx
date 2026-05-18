@@ -8,27 +8,34 @@ import gsap from "gsap";
 
 const galleryImages = [
   {
-    src: "/images/vw 14.jpg",
-    alt: "Mollie vintage VW camper van side view",
-  },
-  {
-    src: "/images/vw 5.jpg",
+    src: "/images/edits/mollie-02.png",
     alt: "Mollie vintage VW camper van parked outdoors",
   },
   {
-    src: "/images/vw 6.jpg",
+    src: "/images/vw 14.jpg",
+    alt: "Mollie vintage VW camper van side view",
+  },
+
+  {
+    src: "/images/edits/mollie-03.png",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/vw 7.jpg",
+    src: "/images/edits/mollie-04.png",
     alt: "Mollie vintage VW camper van front angle view",
   },
   {
-    src: "/images/vw 1.jpg",
+    src: "/images/vw 12.jpg",
     alt: "Mollie vintage VW camper van front angle view",
   },
+
   {
-    src: "/images/vw 3.jpg",
+    src: "/images/edits/mollie-01.png",
+    alt: "Mollie vintage VW camper van front angle view",
+  },
+
+  {
+    src: "/images/vw 16.jpg",
     alt: "Mollie vintage VW camper van front angle view",
   },
 ];
@@ -240,6 +247,10 @@ export default function MeetMollie() {
                 those iconic VW windows allowing the light to flood in. She is
                 very proud of her full-length sunroof which when open only adds
                 to the experience.
+              </p>
+              <p>
+                And if you have a pet that is part of your special day, Mollie
+                loves them too!
               </p>
               <p>
                 {" "}

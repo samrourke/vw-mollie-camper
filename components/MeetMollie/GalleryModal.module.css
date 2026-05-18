@@ -38,7 +38,7 @@
 }
 
 /* optional subtle overlay to unify images */
-.imageWrap::after {
+/* .imageWrap::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -50,7 +50,7 @@
       rgba(0, 0, 0, 0.04) 22%,
       rgba(0, 0, 0, 0.02) 100%
     );
-}
+} */
 
 .close {
   position: absolute;

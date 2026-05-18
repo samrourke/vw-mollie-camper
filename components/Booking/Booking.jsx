@@ -22,6 +22,11 @@ export default function Booking() {
               Don't forget to mention any special requests that you may have for
               Mollie.
             </p>
+            <p className={styles.intro}>
+              If you have any pets that are joining you, that's great! Mollie
+              loves animals and is{" "}
+              <span className={styles.bold}>pet friendly.</span>{" "}
+            </p>
 
             <div className={styles.details}>
               <div className={styles.detailItem}>

@@ -36,14 +36,16 @@ export default function Hero() {
               Meet Mollie
             </a>
           </div>
-
-          <p className={styles.meta}>
-            Available for weddings, events and styled shoots across London and
-            the South.
-          </p>
         </div>
 
         <div className={styles.sunBadge}>Fun • Colourful • Unforgettable</div>
+      </div>
+      <div className={styles.heroBottom}>
+        <p className={styles.meta}>
+          Available for weddings, events and styled shoots across London and the
+          South <span className={styles.bold}>from £400</span>. Get in touch to
+          find out more and check availability.
+        </p>
       </div>
     </section>
   );

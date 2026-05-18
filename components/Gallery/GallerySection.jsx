@@ -39,31 +39,90 @@ export default function GallerySection() {
 
       {/* Row 1 */}
       <div className={`${styles.full} reveal`}>
-        <Image src="/images/vw 12.jpg" alt="" fill className={styles.img} />
+        <Image
+          src="/images/edits/couple-10.png"
+          alt=""
+          fill
+          className={styles.img}
+        />
       </div>
 
       {/* Row 2 */}
       <div className={styles.split}>
         <div className={`${styles.half} reveal`}>
-          <Image src="/images/vw 1.jpg" alt="" fill className={styles.img} />
+          <Image
+            src="/images/edits/couple-07.png"
+            alt=""
+            fill
+            className={styles.img}
+          />
         </div>
         <div className={`${styles.half} reveal`}>
-          <Image src="/images/vw 2.jpg" alt="" fill className={styles.img} />
+          <Image
+            src="/images/edits/champagne-01.jpg"
+            alt=""
+            fill
+            className={styles.img}
+          />
         </div>
       </div>
 
       {/* Row 3 */}
       <div className={styles.offsetRow}>
         <div className={`${styles.large} reveal`}>
-          <Image src="/images/vw 3.jpg" alt="" fill className={styles.img} />
+          <Image
+            src="/images/edits/couple-08.png"
+            alt=""
+            fill
+            className={styles.img}
+          />
         </div>
         <div className={styles.smallContainer}>
           <div className={`${styles.small} reveal`}>
-            <Image src="/images/vw 4.jpg" alt="" fill className={styles.img} />
+            <Image
+              src="/images/edits/mollie-03.png"
+              alt=""
+              fill
+              className={styles.img}
+            />
           </div>
           <div className={`${styles.small} reveal`}>
-            <Image src="/images/vw 9.jpg" alt="" fill className={styles.img} />
+            <Image
+              src="/images/edits/dog-01.jpg"
+              alt=""
+              fill
+              className={styles.img}
+            />
           </div>
+        </div>
+      </div>
+
+      {/* Row 4 */}
+      <div className={`${styles.full} reveal`}>
+        <Image
+          src="/images/edits/bridesmaids-ps.png"
+          alt=""
+          fill
+          className={styles.img}
+        />
+      </div>
+      {/* Row 5 */}
+      <div className={styles.split}>
+        <div className={`${styles.half} reveal`}>
+          <Image
+            src="/images/edits/mollie-04.png"
+            alt=""
+            fill
+            className={styles.img}
+          />
+        </div>
+        <div className={`${styles.half} reveal`}>
+          <Image
+            src="/images/edits/couple-09.png"
+            alt=""
+            fill
+            className={styles.img}
+          />
         </div>
       </div>
     </section>

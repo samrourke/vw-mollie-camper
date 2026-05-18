@@ -3,9 +3,10 @@
 }
 
 .banner {
-  width: 100%;
+  width: 110%;
   min-height: 100svh;
-  background-image: url("/images/vw 5.jpg");
+  transform: translateX(calc(var(--paddingLR) * -1));
+  background-image: url("/images/edits/couple-02.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -16,7 +17,7 @@
   padding: clamp(1.25rem, 2vw, 2rem);
 }
 
-.overlay {
+/* .overlay {
   position: absolute;
   inset: 0;
   background:
@@ -28,14 +29,14 @@
       rgba(20, 35, 34, 0.1) 100%
     );
   z-index: 1;
-}
+} */
 
 .content {
   position: relative;
   z-index: 2;
   max-width: 760px;
   padding-left: var(--paddingLR);
-  padding-bottom: var(--paddingLR);
+  padding-bottom: 15vh;
 }
 
 .eyebrow {
@@ -58,6 +59,7 @@
 .titleDiv {
   color: var(--cream);
   width: 100%;
+
 }
 
 .titleTextContainer{
@@ -105,6 +107,7 @@ transform: translate(-10%, 70%) rotate(6deg);
   line-height: 1;
   color: var(--cream);
   text-wrap: balance;
+    text-shadow: 3px 2px 0px var(--dark-teal);
 }
 
 .buttons {
@@ -114,12 +117,31 @@ transform: translate(-10%, 70%) rotate(6deg);
   gap: 1.1rem;
   margin-top: 2rem;
 }
+.heroBottom{
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+
+  background-color: var(--cream);
+  z-index: 1;
+   padding: 1rem var(--paddingLR);
+   text-align: center;
+}
 
 .meta {
   margin: 1rem 0 0;
-  color: rgba(245, 240, 230, 0.86);
-  font-size: var(--fs-p);
+  color: rgba(245, 240, 230, 1);
+  max-width: 68ch;
+
   line-height: 1.4;
+  color: var(--teal);
+  text-shadow: rgba(0, 0, 0, 0.12) 0px 4px 12px;
+  margin: 0 auto;
+}
+
+.bold{
+  font-weight: 700;
 }
 
 .sunBadge {
@@ -144,12 +166,13 @@ transform: translate(-10%, 70%) rotate(6deg);
 @media (max-width: 900px) {
   .banner {
     align-items: flex-end;
+   
   }
 
   .content {
     max-width: 100%;
     padding-left: 0;
-    padding-bottom: calc(var(--paddingLR) + 1rem);
+   
   }
 
   
@@ -167,7 +190,10 @@ transform: translate(-10%, 70%) rotate(6deg);
   .banner {
     padding: 1rem;
     min-height: 100svh;
-    background-position: center;
+       /* background-image: url("/images/edits/mollie-07.png");
+    background-position: center; */
+
+   
   }
 
   .bannerImg{
