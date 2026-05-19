@@ -90,9 +90,9 @@ export default function Navbar({
       <Link key="mobileLogo" href="/" className={styles.mobileLogoWrap}>
         <img src={logo} alt="Site logo" className={styles.mobileLogo} />
       </Link>
-      <div className={styles.mobileTitleWrap}>
+      {/* <div className={styles.mobileTitleWrap}>
         <h3 className={styles.mobileTitle}>Rock The Bus</h3>
-      </div>
+      </div> */}
 
       {/* Desktop Nav */}
       <ul className={styles.desktopNav}>

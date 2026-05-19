@@ -95,7 +95,7 @@ export default function MeetMollie() {
   };
 
   useEffect(() => {
-    const transitionTime = isModalOpen ? 30000 : 4500;
+    const transitionTime = isModalOpen ? 3000000 : 4500;
     const slides = slidesRef.current.filter(Boolean);
     if (!slides.length) return;
 

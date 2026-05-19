@@ -323,11 +323,11 @@ position: absolute;
   }
 
   .mediaWrap {
-    order: 2;
+    order: 1;
   }
 
   .storyCopy {
-    order: 1;
+    order: 2;
     max-width: none;
   }
 
