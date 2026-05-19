@@ -8,7 +8,7 @@ import gsap from "gsap";
 
 const galleryImages = [
   {
-    src: "/images/edits/mollie-02.png",
+    src: "/images/output/mollie-02.avif",
     alt: "Mollie vintage VW camper van parked outdoors",
   },
   {
@@ -17,39 +17,39 @@ const galleryImages = [
   },
 
   {
-    src: "/images/edits/mollie-03.png",
+    src: "/images/output/mollie-03.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/edits/champagne-01.jpg",
+    src: "/images/output/champagne-01.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/edits/couple-05B.png",
+    src: "/images/output/couple-05B.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/edits/dog-01.jpg",
+    src: "/images/output/dog-01.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/edits/mollie-06.png",
+    src: "/images/output/mollie-06.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/edits/bridesmaids-ps.png",
+    src: "/images/output/bridesmaids-ps.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/edits/mollie-03.png",
+    src: "/images/output/mollie-03.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/edits/couple-06.png",
+    src: "/images/output/couple-06.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/edits/mollie-04.png",
+    src: "/images/output/mollie-04.avif",
     alt: "Mollie vintage VW camper van front angle view",
   },
   {
@@ -58,11 +58,11 @@ const galleryImages = [
   },
 
   {
-    src: "/images/edits/mollie-01.png",
+    src: "/images/output/mollie-01.avif",
     alt: "Mollie vintage VW camper van front angle view",
   },
   {
-    src: "/images/edits/couple-02.jpg",
+    src: "/images/output/couple-02.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
 

@@ -51,7 +51,7 @@ export default function GallerySection() {
       <div className={styles.split}>
         <div className={`${styles.half} reveal`}>
           <Image
-            src="/images/edits/couple-07.png"
+            src="/images/output/couple-07.avif"
             alt=""
             fill
             className={styles.img}
@@ -59,7 +59,7 @@ export default function GallerySection() {
         </div>
         <div className={`${styles.half} reveal`}>
           <Image
-            src="/images/edits/champagne-01.jpg"
+            src="/images/output/champagne-01.avif"
             alt=""
             fill
             className={styles.img}
@@ -71,7 +71,7 @@ export default function GallerySection() {
       <div className={styles.offsetRow}>
         <div className={`${styles.large} reveal`}>
           <Image
-            src="/images/edits/couple-08.png"
+            src="/images/output/couple-08.avif"
             alt=""
             fill
             className={styles.img}
@@ -80,7 +80,7 @@ export default function GallerySection() {
         <div className={styles.smallContainer}>
           <div className={`${styles.small} reveal`}>
             <Image
-              src="/images/edits/mollie-03.png"
+              src="/images/output/mollie-03.avif"
               alt=""
               fill
               className={styles.img}
@@ -88,7 +88,7 @@ export default function GallerySection() {
           </div>
           <div className={`${styles.small} reveal`}>
             <Image
-              src="/images/edits/dog-01.jpg"
+              src="/images/output/dog-01.avif"
               alt=""
               fill
               className={styles.img}
@@ -100,7 +100,7 @@ export default function GallerySection() {
       {/* Row 4 */}
       <div className={`${styles.full} reveal`}>
         <Image
-          src="/images/edits/bridesmaids-ps.png"
+          src="/images/output/bridesmaids-ps.avif"
           alt=""
           fill
           className={styles.img}
@@ -110,7 +110,7 @@ export default function GallerySection() {
       <div className={styles.split}>
         <div className={`${styles.half} reveal`}>
           <Image
-            src="/images/edits/mollie-04.png"
+            src="/images/output/mollie-04.avif"
             alt=""
             fill
             className={styles.img}
@@ -118,7 +118,7 @@ export default function GallerySection() {
         </div>
         <div className={`${styles.half} reveal`}>
           <Image
-            src="/images/edits/couple-09.png"
+            src="/images/output/couple-09.avif"
             alt=""
             fill
             className={styles.img}
