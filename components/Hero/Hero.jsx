@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -10,14 +11,19 @@ export default function Hero() {
           {/* <p className={styles.eyebrow}>Vintage VW wedding hire</p> */}
 
           <div className={styles.titleDiv}>
-            <div className={styles.titleTextContainer}>
+            {/* <div className={styles.titleTextContainer}>
               <h1 className={styles.title}>ROCK THE BUS</h1>
               <img
                 src="/images/hero-banner.png"
                 className={styles.bannerImg}
                 alt="Banner Image Vintage VW Hire"
               />
-            </div>
+            </div> */}
+            <img
+              src="/icon.png"
+              alt="rock the bus logo"
+              className={styles.logo}
+            />
 
             {/* <p className={styles.subtitle}>
               Classic split-screen camper van hire for weddings, photos and
@@ -37,14 +43,19 @@ export default function Hero() {
             </a>
           </div>
         </div>
-
-        <div className={styles.sunBadge}>Fun • Colourful • Unforgettable</div>
+        {/* 
+        <div className={styles.sunBadge}>Fun • Colourful • Unforgettable</div> */}
       </div>
       <div className={styles.heroBottom}>
         <p className={styles.meta}>
-          Available for weddings, events and styled shoots across London and the
-          South <span className={styles.bold}>from £400</span>. Get in touch to
-          find out more and check availability.
+          Available for weddings, events and styled shoots across South London.
+          <span> </span>
+          <Link style={{ textDecoration: "underline" }} href="/#contact">
+            {" "}
+            Get in touch
+          </Link>
+          <span> </span>
+          to find out more and check availability.
         </p>
       </div>
     </section>

@@ -33,10 +33,9 @@ export default function AboutPage() {
               <h2 className="sectionTitle">More than just a van</h2>
               <p>
                 I'm Andy, Mollie's driver and owner of Rock The Bus. I started
-                Rock The Bus because of a genuine love for classic Volkswagen
-                camper vans. I have always had a passion for these cars,
-                especially the iconic split screens that seem to bring joy
-                wherever they go.
+                Rock The Bus because of a genuine love for classic Volkswagens.
+                I have always had a passion for them, especially the iconic
+                split screens that seem to bring joy wherever they go.
               </p>
               {/* <p>
                 With their curved shape, endless windows and unmistakable
@@ -46,10 +45,10 @@ export default function AboutPage() {
                 part of the occasion rather than just the travel in between.
               </p> */}
               <p>
-                I feel incredibly lucky to share this beautiful camper, Mollie,
-                with couples on one of the most memorable days of their lives.
-                And after all, life is too short not to ride in a classic VW
-                split screen!
+                I feel incredibly lucky to share our beautiful Mollie with
+                couples on one of the most memorable days of their lives. And
+                after all, life is too short not to ride in a classic VW split
+                screen!
               </p>
             </div>
 
@@ -97,14 +96,13 @@ export default function AboutPage() {
               <h2 className="sectionTitle">What We Offer</h2>
               <p>
                 Mollie is here to make your day feel calm, special and just that
-                little bit different.
+                little bit more unique.
               </p>
               <p>
-                She’ll arrive to collect those about to be wed, along with a
-                special friend, pet or family member if needed and take them to
-                the ceremony in a relaxed and unhurried. We like to give
-                everyone a moment here to breathe and enjoy the ride before
-                everything begins.
+                Mollie shall pick up those to be wed along with any special
+                friends for a smooth, calm and stress-free journey to the
+                ceremony. We like to give everyone a moment here to breathe and
+                enjoy the journey.
               </p>
               <p>
                 Afterwards, she can whisk the newlyweds off to the celebration
@@ -112,11 +110,6 @@ export default function AboutPage() {
                 loves being part of the occasion and is always very happy to
                 have her picture taken.
               </p>
-              {/* <p>
-                Whether it’s the arrival, the journey itself, or those lovely
-                in-between moments, she brings warmth, character and something
-                truly memorable to the day.
-              </p> */}
             </div>
           </div>
         </div>

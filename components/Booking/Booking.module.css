@@ -256,7 +256,7 @@ input:focus {
 .logoDiv{
     position: absolute;
     bottom:0;
-    transform: translate(0, 50%);
+    transform: translate(10%, 40%) rotate(9deg);
     width:100%;
     display: flex;
     align-items: flex-end;
@@ -265,7 +265,7 @@ input:focus {
 }
 
 .logo{
-    width: 200px;
+      width: clamp(150px, 20vw, 300px);
     height: auto;
 }
 
@@ -315,18 +315,22 @@ input:focus {
     grid-template-columns: 1fr;
   }
 
+  .logoDiv{
+    transform: translate(7%, 30%) rotate(9deg);
+  }
+
   .logo{
-    width:150px;
+    width:220px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   .container {
     width: min(100% - 1.5rem, 1200px);
   }
 
   .section {
-    padding: 4.5rem 0 4rem;
+    padding: 7rem 0.5rem 4rem;
   }
 
   .title {
@@ -336,6 +340,7 @@ input:focus {
   .formCard {
     padding: 4rem 1rem 1rem;
     border-radius: 1.5rem;
+    width:80vw;
   }
 
   .fieldGrid {
@@ -346,6 +351,7 @@ input:focus {
 
  
     text-align: center;
+    margin: 0 auto;
     
   }
 
@@ -357,6 +363,6 @@ input:focus {
   }
 
    .logo{
-    width:120px;
+    display: none;
   }
 }

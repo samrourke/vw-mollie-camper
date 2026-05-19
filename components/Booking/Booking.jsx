@@ -12,10 +12,10 @@ export default function Booking() {
             <h2 className="sectionTitle">Get In Touch</h2>
             <p className={styles.intro}>
               The hire of Mollie starts from{" "}
-              <span className={styles.bold}>£400</span>. To enquire about
-              Mollie’s availability please send a message via the form below and
-              include the date of your wedding, where it is and how many trips
-              are required.
+              <span className={styles.bold}>£450</span>. To enquire about
+              Mollie’s availability please send a message via our booking form
+              and include the date of your wedding, where it is and how many
+              trips are required.
             </p>
 
             <p className={`${styles.intro} ${styles.bold}`}>
@@ -41,18 +41,14 @@ export default function Booking() {
 
               <div className={styles.detailItem}>
                 <span className={styles.detailLabel}>Based in</span>
-                <p className={styles.detailText}>Kent</p>
+                <p className={styles.detailText}>Wimbledon</p>
               </div>
 
               <div className={styles.detailItem}>
                 <span className={styles.detailLabel}>Covering</span>
-                <p className={styles.detailText}>London and the South</p>
+                <p className={styles.detailText}>South London</p>
               </div>
             </div>
-
-            {/* <div className={styles.badge}>
-              <span>Weddings • Styled shoots • Special occasions</span>
-            </div> */}
           </div>
 
           <div className={styles.right}>
@@ -133,39 +129,10 @@ export default function Booking() {
                 <div className={styles.logoDiv}>
                   <img src="/icon.png" className={styles.logo} />
                 </div>
-                {/* <p className={styles.responseNote}>
-                  We usually reply within 1–2 days.
-                </p> */}
               </form>
             </div>
           </div>
         </div>
-
-        {/* <div className={styles.cardRow}>
-          <article className={styles.infoCard}>
-            <h3>Wedding bookings</h3>
-            <p>
-              A memorable way to arrive, depart or add something special to the
-              day.
-            </p>
-          </article>
-
-          <article className={styles.infoCard}>
-            <h3>Photo shoots</h3>
-            <p>
-              Perfect for couple portraits, guest pictures and relaxed styled
-              content.
-            </p>
-          </article>
-
-          <article className={styles.infoCard}>
-            <h3>Kent & South East</h3>
-            <p>
-              Available across Kent and surrounding areas for carefully planned
-              bookings.
-            </p>
-          </article>
-        </div> */}
       </div>
     </section>
   );

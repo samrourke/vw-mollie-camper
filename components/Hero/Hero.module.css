@@ -6,7 +6,7 @@
   width: 110%;
   min-height: 100svh;
   transform: translateX(calc(var(--paddingLR) * -1));
-  background-image: url("/images/output/couple-02.avif");
+  background-image: url("/images/output/couple-18.avif");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -75,12 +75,17 @@
   line-height: 0.92;
   letter-spacing: -0.02em;
   font-weight: 500;
-  text-shadow: 3px 2px 0px var(--gold);
-  
- 
-
+  text-shadow: 3px 2px 0px var(--dark-teal);
 }
 
+
+.logo{
+  height:350px;
+  width:auto;
+  transform: translateY(20%) rotate(-10deg);
+ 
+  
+}
 
 .bannerImg{
 width: clamp(180px, 40%, 800px); 
@@ -105,9 +110,10 @@ transform: translate(-10%, 70%) rotate(6deg);
   font-family: var(--font-retro, inherit);
   font-size: var(--fs-h3);
   line-height: 1;
-  color: var(--cream);
+  color: rgb(255, 254, 244);
   text-wrap: balance;
-    text-shadow: 3px 2px 0px var(--gold);
+  text-shadow: 2px 2px 0px black;
+  filter:brightness(110%)
 }
 
 .buttons {
@@ -209,11 +215,14 @@ transform: translate(-10%, 70%) rotate(6deg);
     line-height: 0.95;
     text-shadow: 2px 2px 0px var(--gold);
   }
+  .logo{
+    display: none;
+  }
 
   .subtitle {
 
     max-width: 100%;
-     text-shadow: 2px 2px 0px var(--gold);
+   
   }
 
   .buttons {
@@ -225,10 +234,11 @@ transform: translate(-10%, 70%) rotate(6deg);
   }
 
   .cta {
-    width: 34%;
+    width: 30%;
     text-align: center;
     padding: 0.5rem;
     text-wrap: nowrap;
+    font-size: 10px;
 
   }
 

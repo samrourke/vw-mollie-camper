@@ -5,6 +5,66 @@ import Image from "next/image";
 import { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 
+const images = [
+  {
+    src: "/images/edits/couple-10.png",
+    className: "hero",
+  },
+  {
+    src: "/images/output/couple-07.avif",
+    className: "landscape",
+  },
+  {
+    src: "/images/output/couple-05B.avif",
+    className: "portrait",
+  },
+  {
+    src: "/images/output/couple-08.avif",
+    className: "large",
+  },
+  {
+    src: "/images/output/couple-06.avif",
+    className: "square",
+  },
+  {
+    src: "/images/output/dog-01.avif",
+    className: "square",
+  },
+  {
+    src: "/images/output/couple-12.avif",
+    className: "landscape",
+  },
+  {
+    src: "/images/output/couple-11.avif",
+    className: "portrait",
+  },
+  {
+    src: "/images/output/couple-13.avif",
+    className: "portrait",
+  },
+
+  {
+    src: "/images/output/couple-14.avif",
+    className: "landscape",
+  },
+  {
+    src: "/images/output/couple-09.avif",
+    className: "portrait",
+  },
+  {
+    src: "/images/output/couple-17.avif",
+    className: "square",
+  },
+  {
+    src: "/images/output/couple-16.avif",
+    className: "landscape",
+  },
+  {
+    src: "/images/output/bridesmaids-ps.avif",
+    className: "large",
+  },
+];
+
 export default function GallerySection() {
   const sectionRef = useRef(null);
 
@@ -12,13 +72,15 @@ export default function GallerySection() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".reveal",
-        { autoAlpha: 0, y: 80, scale: 1.05 },
+        {
+          autoAlpha: 0,
+          y: 60,
+        },
         {
           autoAlpha: 1,
           y: 0,
-          scale: 1,
-          duration: 1.2,
-          stagger: 0.15,
+          duration: 1,
+          stagger: 0.08,
           ease: "power3.out",
         },
       );
@@ -30,100 +92,25 @@ export default function GallerySection() {
   return (
     <section id="gallery" className={styles.section} ref={sectionRef}>
       <div className={styles.title}>
-        {" "}
         <h1 className="sectionTitle">Gallery</h1>
+
         <h3 className={styles.subtitle}>
-          See Mollie in action with all her friends{" "}
+          See Mollie in action with all her friends
         </h3>
       </div>
 
-      {/* Row 1 */}
-      <div className={`${styles.full} reveal`}>
-        <Image
-          src="/images/edits/couple-10.png"
-          alt=""
-          fill
-          className={styles.img}
-        />
-      </div>
-
-      {/* Row 2 */}
-      <div className={styles.split}>
-        <div className={`${styles.half} reveal`}>
-          <Image
-            src="/images/output/couple-07.avif"
-            alt=""
-            fill
-            className={styles.img}
-          />
-        </div>
-        <div className={`${styles.half} reveal`}>
-          <Image
-            src="/images/output/champagne-01.avif"
-            alt=""
-            fill
-            className={styles.img}
-          />
-        </div>
-      </div>
-
-      {/* Row 3 */}
-      <div className={styles.offsetRow}>
-        <div className={`${styles.large} reveal`}>
-          <Image
-            src="/images/output/couple-08.avif"
-            alt=""
-            fill
-            className={styles.img}
-          />
-        </div>
-        <div className={styles.smallContainer}>
-          <div className={`${styles.small} reveal`}>
+      <div className={styles.gallery}>
+        {images.map((image, index) => (
+          <div key={index} className={`${styles.item} reveal`}>
             <Image
-              src="/images/output/mollie-03.avif"
+              src={image.src}
               alt=""
-              fill
+              width={1200}
+              height={800}
               className={styles.img}
             />
           </div>
-          <div className={`${styles.small} reveal`}>
-            <Image
-              src="/images/output/dog-01.avif"
-              alt=""
-              fill
-              className={styles.img}
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Row 4 */}
-      <div className={`${styles.full} reveal`}>
-        <Image
-          src="/images/output/bridesmaids-ps.avif"
-          alt=""
-          fill
-          className={styles.img}
-        />
-      </div>
-      {/* Row 5 */}
-      <div className={styles.split}>
-        <div className={`${styles.half} reveal`}>
-          <Image
-            src="/images/output/mollie-04.avif"
-            alt=""
-            fill
-            className={styles.img}
-          />
-        </div>
-        <div className={`${styles.half} reveal`}>
-          <Image
-            src="/images/output/couple-09.avif"
-            alt=""
-            fill
-            className={styles.img}
-          />
-        </div>
+        ))}
       </div>
     </section>
   );

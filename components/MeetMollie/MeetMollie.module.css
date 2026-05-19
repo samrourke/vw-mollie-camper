@@ -188,6 +188,9 @@
 }
 
 @media (max-width: 980px) {
+  .section{
+    padding-top: 7rem;
+  }
   .topRow {
     grid-template-columns: 1fr;
   }
@@ -229,9 +232,7 @@
 }
 
 @media (max-width: 640px) {
-  .section {
-    padding: 4rem 1rem;
-  }
+
 
   .ribbon {
     width: 210px;

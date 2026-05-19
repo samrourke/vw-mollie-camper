@@ -11,50 +11,10 @@ const galleryImages = [
     src: "/images/output/mollie-02.avif",
     alt: "Mollie vintage VW camper van parked outdoors",
   },
-  {
-    src: "/images/vw 14.jpg",
-    alt: "Mollie vintage VW camper van side view",
-  },
 
   {
-    src: "/images/output/mollie-03.avif",
-    alt: "Mollie vintage VW camper van wedding styling detail",
-  },
-  {
-    src: "/images/output/champagne-01.avif",
-    alt: "Mollie vintage VW camper van wedding styling detail",
-  },
-  {
-    src: "/images/output/couple-05B.avif",
-    alt: "Mollie vintage VW camper van wedding styling detail",
-  },
-  {
-    src: "/images/output/dog-01.avif",
-    alt: "Mollie vintage VW camper van wedding styling detail",
-  },
-  {
-    src: "/images/output/mollie-06.avif",
-    alt: "Mollie vintage VW camper van wedding styling detail",
-  },
-  {
-    src: "/images/output/bridesmaids-ps.avif",
-    alt: "Mollie vintage VW camper van wedding styling detail",
-  },
-  {
-    src: "/images/output/mollie-03.avif",
-    alt: "Mollie vintage VW camper van wedding styling detail",
-  },
-  {
-    src: "/images/output/couple-06.avif",
-    alt: "Mollie vintage VW camper van wedding styling detail",
-  },
-  {
     src: "/images/output/mollie-04.avif",
-    alt: "Mollie vintage VW camper van front angle view",
-  },
-  {
-    src: "/images/vw 12.jpg",
-    alt: "Mollie vintage VW camper van front angle view",
+    alt: "Mollie vintage VW camper van wedding styling detail",
   },
 
   {
@@ -62,13 +22,41 @@ const galleryImages = [
     alt: "Mollie vintage VW camper van front angle view",
   },
   {
-    src: "/images/output/couple-02.avif",
+    src: "/images/output/mollie-09.avif",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/output/mollie-08.avif",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/output/mollie-03.avif",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/output/mollie-11.avif",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/output/mollie-10.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
 
   {
-    src: "/images/vw 16.jpg",
-    alt: "Mollie vintage VW camper van front angle view",
+    src: "/images/output/mollie-12.avif",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/output/mollie-13.avif",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/output/mollie-14.avif",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/output/champagne-01.avif",
+    alt: "Mollie vintage VW camper van wedding styling detail",
   },
 ];
 
@@ -201,16 +189,16 @@ export default function MeetMollie() {
         <div className={styles.container}>
           <div className={styles.topRow}>
             <div className={styles.copy}>
-              <h2 className="sectionTitle">A Classic VW Camper With Charm</h2>
+              <h2 className="sectionTitle">A Classic VW With Charm</h2>
 
               <p className={styles.text}>
                 Mollie is our much-loved vintage VW split-screen camper van,
                 available for weddings, styled shoots and special occasions.
               </p>
               <p className={styles.text}>
-                Full of character and guaranteed to turn heads, she brings a
-                fun, colourful touch to the day and makes every arrival feel
-                that little bit more memorable.
+                Full of character and guaranteed to turn heads, she brings fun,
+                a colourful touch to the day and makes every arrival feel that
+                bit more special.
               </p>
 
               <p className={styles.text}>
