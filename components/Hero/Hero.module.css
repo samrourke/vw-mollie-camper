@@ -107,7 +107,7 @@ transform: translate(-10%, 70%) rotate(6deg);
   line-height: 1;
   color: var(--cream);
   text-wrap: balance;
-    text-shadow: 3px 2px 0px var(--dark-teal);
+    text-shadow: 3px 2px 0px var(--gold);
 }
 
 .buttons {
@@ -171,7 +171,7 @@ transform: translate(-10%, 70%) rotate(6deg);
 
   .content {
     max-width: 100%;
-    padding-left: 0;
+
    
   }
 
@@ -193,7 +193,7 @@ transform: translate(-10%, 70%) rotate(6deg);
        /* background-image: url("/images/edits/mollie-07.png");
     background-position: center; */
 
-   
+  
   }
 
   .bannerImg{
@@ -213,6 +213,7 @@ transform: translate(-10%, 70%) rotate(6deg);
   .subtitle {
 
     max-width: 100%;
+     text-shadow: 2px 2px 0px var(--gold);
   }
 
   .buttons {

@@ -288,6 +288,18 @@ position: absolute;
   background: rgba(42, 114, 111, 0.18);
 }
 
+
+.logoContainer{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.logo{
+  width: clamp(150px, 20vw, 250px);
+}
 @media (max-width: 1100px) {
   .cardRow {
     grid-template-columns: repeat(2, 1fr);

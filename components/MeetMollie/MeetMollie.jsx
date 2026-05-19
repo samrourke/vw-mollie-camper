@@ -21,6 +21,34 @@ const galleryImages = [
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
+    src: "/images/edits/champagne-01.jpg",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/edits/couple-05B.png",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/edits/dog-01.jpg",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/edits/mollie-06.png",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/edits/bridesmaids-ps.png",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/edits/mollie-03.png",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
+    src: "/images/edits/couple-06.png",
+    alt: "Mollie vintage VW camper van wedding styling detail",
+  },
+  {
     src: "/images/edits/mollie-04.png",
     alt: "Mollie vintage VW camper van front angle view",
   },
@@ -32,6 +60,10 @@ const galleryImages = [
   {
     src: "/images/edits/mollie-01.png",
     alt: "Mollie vintage VW camper van front angle view",
+  },
+  {
+    src: "/images/edits/couple-02.jpg",
+    alt: "Mollie vintage VW camper van wedding styling detail",
   },
 
   {
@@ -208,7 +240,7 @@ export default function MeetMollie() {
                 <div ref={slideshowRef} className={styles.slideshow}>
                   {galleryImages.map((image, index) => (
                     <div
-                      key={image.src}
+                      key={index}
                       ref={(el) => setSlideRef(el, index)}
                       className={styles.slide}
                     >
@@ -349,7 +381,8 @@ export default function MeetMollie() {
               <Image
                 src={galleryImages[activeIndex].src}
                 alt={galleryImages[activeIndex].alt}
-                fill
+                width={1600}
+                height={1200}
                 className={modalStyles.modalImage}
                 sizes="100vw"
                 priority
@@ -357,26 +390,28 @@ export default function MeetMollie() {
             </div>
 
             <div className={modalStyles.navContainer}>
-              <button
-                type="button"
-                className={`${modalStyles.nav} ${modalStyles.prev}`}
-                onClick={goPrev}
-                aria-label="Previous image"
-              >
-                ←
-              </button>
-              <button
-                type="button"
-                className={`${modalStyles.nav} ${modalStyles.next}`}
-                onClick={goNext}
-                aria-label="Next image"
-              >
-                →
-              </button>
-            </div>
+              <div className={modalStyles.buttonContainer}>
+                <button
+                  type="button"
+                  className={`${modalStyles.nav} ${modalStyles.prev}`}
+                  onClick={goPrev}
+                  aria-label="Previous image"
+                >
+                  ←
+                </button>
+                <button
+                  type="button"
+                  className={`${modalStyles.nav} ${modalStyles.next}`}
+                  onClick={goNext}
+                  aria-label="Next image"
+                >
+                  →
+                </button>
+              </div>
 
-            <div className={modalStyles.counter}>
-              {activeIndex + 1} / {galleryImages.length}
+              <div className={modalStyles.counter}>
+                {activeIndex + 1} / {galleryImages.length}
+              </div>
             </div>
           </div>
         </div>

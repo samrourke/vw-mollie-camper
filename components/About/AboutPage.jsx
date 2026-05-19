@@ -32,9 +32,10 @@ export default function AboutPage() {
               {/* <p className={styles.sectionLabel}>Who we are</p> */}
               <h2 className="sectionTitle">More than just a van</h2>
               <p>
-                Rock the Bus is built around a genuine love for classic
-                Volkswagen camper vans. I have always had a passion for these
-                cars, especially the iconic split screens that seem to bring joy
+                I'm Andy, Mollie's driver and owner of Rock The Bus. I started
+                Rock The Bus because of a genuine love for classic Volkswagen
+                camper vans. I have always had a passion for these cars,
+                especially the iconic split screens that seem to bring joy
                 wherever they go.
               </p>
               {/* <p>
@@ -118,6 +119,13 @@ export default function AboutPage() {
               </p> */}
             </div>
           </div>
+        </div>
+        <div className={styles.logoContainer}>
+          <img
+            src="/icon.png"
+            alt="Rock The Bus logo"
+            className={styles.logo}
+          />
         </div>
       </section>
       {/* <section className={styles.expectSection}>
