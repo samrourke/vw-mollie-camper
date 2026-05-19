@@ -26,10 +26,10 @@
 
 .logoWrap{
   position: relative;
-  transform: translateY(18%);
+  transform: translateY(25%);
 }
 .logo {
-  height: 230px;
+  height: 220px;
   width: auto;
 
 }
@@ -171,7 +171,8 @@
   .mobileLogoWrap{
     display: flex;
     align-items: center;
-    gap:2rem
+    gap:2rem;
+    transform: translateY(10%);
 
   }
   .mobileLogo{

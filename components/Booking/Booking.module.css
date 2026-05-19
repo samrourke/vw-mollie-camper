@@ -362,7 +362,15 @@ input:focus {
     text-align: center;
   }
 
+  .logoDiv{
+    position: relative;
+     transform: translate(0%, 10%) rotate(0deg);
+    
+  }
+
    .logo{
-    display: none;
+    margin:0 auto;
+    display: block;
+    transform: none;
   }
 }

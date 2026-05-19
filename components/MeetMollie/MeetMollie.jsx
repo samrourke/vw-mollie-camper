@@ -192,11 +192,11 @@ export default function MeetMollie() {
               <h2 className="sectionTitle">A Classic VW With Charm</h2>
 
               <p className={styles.text}>
-                Mollie is our much-loved vintage VW split-screen camper van,
-                available for weddings, styled shoots and special occasions.
+                Mollie is our much-loved vintage VW split-screen camper van. She
+                is available for weddings, styled shoots and special occasions.
               </p>
               <p className={styles.text}>
-                Full of character and guaranteed to turn heads, she brings fun,
+                Full of character and guaranteed to turn heads. She brings fun,
                 a colourful touch to the day and makes every arrival feel that
                 bit more special.
               </p>

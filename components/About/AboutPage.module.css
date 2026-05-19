@@ -298,7 +298,7 @@ position: absolute;
 }
 
 .logo{
-  width: clamp(220px, 25vw, 360px);
+  width: clamp(260px, 25vw, 360px);
   height: auto;
   transform: translateY(15%);
 }

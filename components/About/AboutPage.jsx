@@ -45,7 +45,7 @@ export default function AboutPage() {
                 part of the occasion rather than just the travel in between.
               </p> */}
               <p>
-                I feel incredibly lucky to share our beautiful Mollie with
+                I feel incredibly lucky to share my beautiful Mollie with
                 couples on one of the most memorable days of their lives. And
                 after all, life is too short not to ride in a classic VW split
                 screen!

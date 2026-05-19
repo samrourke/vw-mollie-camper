@@ -82,7 +82,8 @@
 .logo{
   height:350px;
   width:auto;
-  transform: translateY(20%) rotate(-10deg);
+  transform: translateY(10%) rotate(-10deg);
+  display: none;
  
   
 }
@@ -227,7 +228,7 @@ transform: translate(-10%, 70%) rotate(6deg);
 
   .buttons {
     flex-direction: row;
-  
+
     align-items: center;
     justify-content: space-evenly;
   
