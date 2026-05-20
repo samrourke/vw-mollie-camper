@@ -16,12 +16,12 @@ import styles from "./Nav.module.css";
 export default function Navbar({
   logo = "/icon.png",
   links = [
-    // { href: "/", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "/#meet-mollie", label: "Mollie" },
     { href: "/#about", label: "About" },
-    { href: "/#reviews", label: "Reviews" },
 
     { href: "/", label: "Logo", image: "/icon.png" },
+    { href: "/#reviews", label: "Reviews" },
     // { href: "/#reviews", label: "Reviews" },
     { href: "/#gallery", label: "Gallery" },
     { href: "/#contact", label: "Contact" },
