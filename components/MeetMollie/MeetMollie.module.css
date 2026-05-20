@@ -1,6 +1,6 @@
 .section {
-   position: relative;
-  padding: clamp(5rem, 8vw, 8rem) 2rem;
+  position: relative;
+  padding: 12rem 2rem 0;
   overflow: hidden;
   background: url("/images/sunset-bg.png");
   background-size: cover;
@@ -188,17 +188,43 @@
   color: rgba(35, 64, 63, 0.8);
 }
 
+.logoContainer{
+  width:100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 99;
+}
+
+.logo{
+  width: clamp(260px, 25vw, 360px);
+  height: auto;
+  transform: translateY(15%) rotate(-11deg);
+}
+
 @media (max-width: 980px) {
   .section{
-    padding: 7rem 0.5rem 0;
+    padding: 12rem 0 0;
   }
-  .topRow {
-    grid-template-columns: 1fr;
+  #title{
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
   }
 
-  .copy {
-    max-width: 100%;
+  .copy{
+    width:100%;
+    max-width: none;
+   
   }
+  .text{
+    max-width: max-content;
+  }
+
+
+  
 
   .title {
     max-width: 100%;
@@ -219,11 +245,12 @@
     margin: 2rem auto;
   }
 
-  .bottom {
+  .topRow, .bottom {
     grid-template-columns: 1fr;
-
+   
     width: 90%;
     margin: 4rem auto;
+    padding: 0;
   }
 
   .infoBlock {

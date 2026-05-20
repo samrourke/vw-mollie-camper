@@ -50,10 +50,6 @@ const slideshowImages = [
     src: "/images/output/mollie-slideshow-crop-02.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
-  {
-    src: "/images/output/champagne-01.avif",
-    alt: "Mollie vintage VW camper van wedding styling detail",
-  },
 ];
 
 export default function MeetMollie() {
@@ -81,12 +77,12 @@ export default function MeetMollie() {
   };
 
   const goNext = () => {
-    setActiveIndex((prev) => (prev + 1) % galleryImages.length);
+    setActiveIndex((prev) => (prev + 1) % slideshowImages.length);
   };
 
   const goPrev = () => {
     setActiveIndex(
-      (prev) => (prev - 1 + galleryImages.length) % galleryImages.length,
+      (prev) => (prev - 1 + slideshowImages.length) % slideshowImages.length,
     );
   };
 
@@ -183,10 +179,11 @@ export default function MeetMollie() {
     <>
       <section className={styles.section} id="meet-mollie">
         <div className={styles.container}>
+          <h2 className="sectionTitle" id={styles.title}>
+            A Classic VW With Charm
+          </h2>
           <div className={styles.topRow}>
             <div className={styles.copy}>
-              <h2 className="sectionTitle">A Classic VW With Charm</h2>
-
               <p className={styles.text}>
                 Mollie is our much-loved vintage VW split-screen camper van. She
                 is available for weddings, styled shoots and special occasions.
@@ -288,6 +285,13 @@ export default function MeetMollie() {
                 her and she will play them. Her tastefully attired chauffeur
                 also comes in a variety of costumes if required.
               </p>
+            </div>
+            <div className={styles.logoContainer}>
+              <img
+                src="/icon.png"
+                alt="Rock The Bus logo"
+                className={styles.logo}
+              />
             </div>
           </div>
 
@@ -394,7 +398,7 @@ export default function MeetMollie() {
               </div>
 
               <div className={modalStyles.counter}>
-                {activeIndex + 1} / {galleryImages.length}
+                {activeIndex + 1} / {slideshowImages.length}
               </div>
             </div>
           </div>

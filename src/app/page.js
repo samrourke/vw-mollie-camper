@@ -5,6 +5,7 @@ import MeetMollie from "../../components/MeetMollie/MeetMollie";
 import AboutPage from "../../components/About/AboutPage";
 import Booking from "../../components/Booking/Booking";
 import GallerySection from "../../components/Gallery/GallerySection";
+import Reviews from "../../components/Reviews/Reviews";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
         <Hero />
         <MeetMollie />
         <AboutPage />
+        <Reviews />
         <GallerySection />
+
         <Booking />
       </main>
     </div>

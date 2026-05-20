@@ -19,6 +19,7 @@ export default function Navbar({
     // { href: "/", label: "Home" },
     { href: "/#meet-mollie", label: "Mollie" },
     { href: "/#about", label: "About" },
+    { href: "/#reviews", label: "Reviews" },
 
     { href: "/", label: "Logo", image: "/icon.png" },
     // { href: "/#reviews", label: "Reviews" },

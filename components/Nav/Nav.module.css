@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  z-index: 99;
+  z-index: 9999;
   background-color: var(--teal);
 
 
@@ -29,7 +29,7 @@
   transform: translateY(25%);
 }
 .logo {
-  height: 190px;
+  height: 200px;
   width: auto;
 
 }
@@ -75,7 +75,7 @@
   border: none;
   cursor: pointer;
   z-index: 100;
-  margin-right: var(--paddingLR);
+  margin-right: 2rem;
 }
 
 .toggleButton span {
