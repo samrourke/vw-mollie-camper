@@ -80,10 +80,10 @@
 
 
 .logo{
-  height:350px;
+  height:clamp(250px, 20vw, 350px);
   width:auto;
   transform: translateY(10%) rotate(-10deg);
-  display: none;
+ 
  
   
 }
@@ -190,6 +190,10 @@ transform: translate(-10%, 70%) rotate(6deg);
   .sunBadge {
     top: 1rem;
     right: 1rem;
+  }
+
+  .logo{
+    display: none;
   }
 }
 

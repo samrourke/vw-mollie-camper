@@ -6,7 +6,7 @@ import modalStyles from "./GalleryModal.module.css";
 import Image from "next/image";
 import gsap from "gsap";
 
-const galleryImages = [
+const slideshowImages = [
   {
     src: "/images/output/mollie-02.avif",
     alt: "Mollie vintage VW camper van parked outdoors",
@@ -30,7 +30,7 @@ const galleryImages = [
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/output/mollie-03.avif",
+    src: "/images/output/mollie-slideshow-crop-01.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
@@ -43,15 +43,11 @@ const galleryImages = [
   },
 
   {
-    src: "/images/output/mollie-12.avif",
-    alt: "Mollie vintage VW camper van wedding styling detail",
-  },
-  {
     src: "/images/output/mollie-13.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/output/mollie-14.avif",
+    src: "/images/output/mollie-slideshow-crop-02.avif",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
@@ -226,7 +222,7 @@ export default function MeetMollie() {
                 aria-label="Open Mollie gallery"
               >
                 <div ref={slideshowRef} className={styles.slideshow}>
-                  {galleryImages.map((image, index) => (
+                  {slideshowImages.map((image, index) => (
                     <div
                       key={index}
                       ref={(el) => setSlideRef(el, index)}
@@ -367,8 +363,8 @@ export default function MeetMollie() {
           >
             <div ref={modalImageRef} className={modalStyles.imageWrap}>
               <Image
-                src={galleryImages[activeIndex].src}
-                alt={galleryImages[activeIndex].alt}
+                src={slideshowImages[activeIndex].src}
+                alt={slideshowImages[activeIndex].alt}
                 width={1600}
                 height={1200}
                 className={modalStyles.modalImage}

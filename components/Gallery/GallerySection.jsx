@@ -112,6 +112,9 @@ export default function GallerySection() {
           </div>
         ))}
       </div>
+      <div className={styles.logoContainer}>
+        <img src="/icon.png" alt="Rock The Bus logo" className={styles.logo} />
+      </div>
     </section>
   );
 }

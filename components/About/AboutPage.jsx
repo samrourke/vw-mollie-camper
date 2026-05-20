@@ -84,7 +84,7 @@ export default function AboutPage() {
               </div>
               <div className={styles.imageCard}>
                 <Image
-                  src="/images/output/couple-06.avif"
+                  src="/images/output/champagne-01.avif"
                   alt="Classic VW wedding camper van ready for a special occasion"
                   fill
                   className={styles.image}
@@ -105,20 +105,25 @@ export default function AboutPage() {
                 enjoy the journey.
               </p>
               <p>
+                Mollie would love you to toast your special day so please feel
+                free to bring a bottle of your favourite tipple and we shall
+                supply the rest.
+              </p>
+              <p>
                 Afterwards, she can whisk the newlyweds off to the celebration
                 and then she can stay a while longer for photographs. Mollie
                 loves being part of the occasion and is always very happy to
                 have her picture taken.
               </p>
+              <div className={styles.logoContainer}>
+                <img
+                  src="/icon.png"
+                  alt="Rock The Bus logo"
+                  className={styles.logo}
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div className={styles.logoContainer}>
-          <img
-            src="/icon.png"
-            alt="Rock The Bus logo"
-            className={styles.logo}
-          />
         </div>
       </section>
       {/* <section className={styles.expectSection}>
