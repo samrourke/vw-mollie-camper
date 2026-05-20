@@ -8,46 +8,46 @@ import gsap from "gsap";
 
 const slideshowImages = [
   {
-    src: "/images/output/mollie-02.avif",
+    src: "/images/output/mollie-02.webp",
     alt: "Mollie vintage VW camper van parked outdoors",
   },
 
   {
-    src: "/images/output/mollie-04.avif",
+    src: "/images/output/mollie-04.webp",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
 
   {
-    src: "/images/output/mollie-01.avif",
+    src: "/images/output/mollie-01.webp",
     alt: "Mollie vintage VW camper van front angle view",
   },
   {
-    src: "/images/output/mollie-09.avif",
+    src: "/images/output/mollie-09.webp",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/output/mollie-08.avif",
+    src: "/images/output/mollie-08.webp",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/output/mollie-slideshow-crop-01.avif",
+    src: "/images/output/mollie-slideshow-crop-01.webp",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/output/mollie-11.avif",
+    src: "/images/output/mollie-11.webp",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/output/mollie-10.avif",
+    src: "/images/output/mollie-10.webp",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
 
   {
-    src: "/images/output/mollie-13.avif",
+    src: "/images/output/mollie-13.webp",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
   {
-    src: "/images/output/mollie-slideshow-crop-02.avif",
+    src: "/images/output/mollie-slideshow-crop-02.webp",
     alt: "Mollie vintage VW camper van wedding styling detail",
   },
 ];
@@ -55,6 +55,7 @@ const slideshowImages = [
 export default function MeetMollie() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [modalIndex, setModalIndex] = useState(0);
 
   const slideshowRef = useRef(null);
   const slidesRef = useRef([]);
@@ -68,7 +69,7 @@ export default function MeetMollie() {
 
   const openModal = (index = activeIndex) => {
     setActiveIndex(index);
-
+    setModalIndex(index);
     setIsModalOpen(true);
   };
 
@@ -77,11 +78,11 @@ export default function MeetMollie() {
   };
 
   const goNext = () => {
-    setActiveIndex((prev) => (prev + 1) % slideshowImages.length);
+    setModalIndex((prev) => (prev + 1) % slideshowImages.length);
   };
 
   const goPrev = () => {
-    setActiveIndex(
+    setModalIndex(
       (prev) => (prev - 1 + slideshowImages.length) % slideshowImages.length,
     );
   };
@@ -374,13 +375,12 @@ export default function MeetMollie() {
           >
             <div ref={modalImageRef} className={modalStyles.imageWrap}>
               <Image
-                src={slideshowImages[activeIndex].src}
-                alt={slideshowImages[activeIndex].alt}
+                src={slideshowImages[modalIndex].src}
+                alt={slideshowImages[modalIndex].alt}
                 width={1600}
                 height={1200}
                 className={modalStyles.modalImage}
                 sizes="100vw"
-                priority
               />
             </div>
 
@@ -405,7 +405,7 @@ export default function MeetMollie() {
               </div>
 
               <div className={modalStyles.counter}>
-                {activeIndex + 1} / {slideshowImages.length}
+                {modalIndex + 1} / {slideshowImages.length}
               </div>
             </div>
           </div>

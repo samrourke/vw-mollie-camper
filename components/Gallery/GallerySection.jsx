@@ -7,7 +7,7 @@ import gsap from "gsap";
 
 const images = [
   {
-    src: "/images/edits/couple-10.png",
+    src: "/images/output/couple-10.avif",
     className: "hero",
   },
   {
