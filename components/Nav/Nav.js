@@ -29,6 +29,11 @@ export default function Navbar({
   accentColor = "var(--teal)",
   breakpoint = 860,
 }) {
+  const linksLeft = links.slice(0, 3);
+  const linksRight = links.slice(4);
+  console.log("Left Links:", linksLeft);
+  console.log("Right Links:", linksRight);
+
   const [isOpen, setIsOpen] = useState(false);
   const [width, setWidth] = useState(0);
   const mobileMenuRef = useRef(null);
@@ -91,13 +96,32 @@ export default function Navbar({
       <Link key="mobileLogo" href="/" className={styles.mobileLogoWrap}>
         <img src={logo} alt="Site logo" className={styles.mobileLogo} />
       </Link>
-      {/* <div className={styles.mobileTitleWrap}>
-        <h3 className={styles.mobileTitle}>Rock The Bus</h3>
-      </div> */}
 
       {/* Desktop Nav */}
-      <ul className={styles.desktopNav}>
-        {links.map((link, i) =>
+      <div className={styles.desktopNav}>
+        <ul className={styles.navLeft}>
+          {linksLeft.map((link, i) => (
+            <li key={`desktopL${i}`}>
+              <Link href={link.href}>
+                <h3>{link.label}</h3>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <Link key="navLogo" href="/" className={styles.logoWrap}>
+          <img src={"/icon.png"} alt="Site logo" className={styles.logo} />
+        </Link>
+        <ul className={styles.navRight}>
+          {linksRight.map((link, i) => (
+            <li key={`desktopR${i}`}>
+              <Link href={link.href}>
+                <h3>{link.label}</h3>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* {links.map((link, i) =>
           link.label === "Logo" ? (
             <Link key="navLogo" href="/" className={styles.logoWrap}>
               <img src={link.image} alt="Site logo" className={styles.logo} />
@@ -109,8 +133,8 @@ export default function Navbar({
               </Link>
             </li>
           ),
-        )}
-      </ul>
+        )} */}
+      </div>
 
       {/* Mobile Nav */}
       <ul ref={mobileMenuRef} className={styles.mobileNav}>
