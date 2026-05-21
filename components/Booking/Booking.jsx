@@ -63,9 +63,6 @@ export default function Booking() {
                 netlify-honeypot="bot-field"
                 action="/thank-you"
               >
-                {/* Required hidden input for Netlify */}
-                <input type="hidden" name="form-name" value="booking" />
-
                 {/* Honeypot anti-spam field */}
                 <div hidden>
                   <input name="bot-field" />
