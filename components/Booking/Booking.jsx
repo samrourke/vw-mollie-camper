@@ -59,12 +59,14 @@ export default function Booking() {
                 className={styles.form}
                 name="booking"
                 method="POST"
+                netlify
                 data-netlify="true"
                 netlify-honeypot="bot-field"
-                action="/thank-you"
               >
                 {/*Hidden Input for Netlify - do not use self closing tags */}
                 <input type="hidden" name="form-name" value="booking"></input>
+                {/*Hidden Input for Netlify to handle redirect instead of action="/thank-you" inside <form /> */}
+                <input type="hidden" name="redirect" value="/thank-you"></input>
                 {/* Honeypot anti-spam field */}
                 <div hidden>
                   <input name="bot-field" />
