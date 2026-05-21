@@ -46,7 +46,7 @@ export default function AboutPage() {
               </div>
               <div className={styles.imageCard}>
                 <Image
-                  src="/images/output/andy-ps.avif"
+                  src="/images/output/andy-ps.webp"
                   alt="Andy, the owner of Rock The Bus, standing next to Mollie, the vintage VW camper van, in a sunny outdoor setting"
                   fill
                   className={styles.image}
@@ -83,7 +83,7 @@ export default function AboutPage() {
               </div>
               <div className={styles.imageCard}>
                 <Image
-                  src="/images/output/champagne-01.avif"
+                  src="/images/output/champagne-01.webp"
                   alt="Classic VW wedding camper van ready for a special occasion"
                   fill
                   className={styles.image}

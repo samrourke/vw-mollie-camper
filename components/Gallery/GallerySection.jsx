@@ -7,60 +7,60 @@ import gsap from "gsap";
 
 const images = [
   {
-    src: "/images/output/couple-10.avif",
+    src: "/images/output/couple-10.webp",
     className: "hero",
   },
   {
-    src: "/images/output/couple-07.avif",
+    src: "/images/output/couple-07.webp",
     className: "landscape",
   },
   {
-    src: "/images/output/couple-05B.avif",
+    src: "/images/output/couple-05B.webp",
     className: "portrait",
   },
   {
-    src: "/images/output/couple-08.avif",
+    src: "/images/output/couple-08.webp",
     className: "large",
   },
   {
-    src: "/images/output/couple-06.avif",
+    src: "/images/output/couple-06.webp",
     className: "square",
   },
   {
-    src: "/images/output/dog-01.avif",
+    src: "/images/output/dog-01.webp",
     className: "square",
   },
   {
-    src: "/images/output/couple-12.avif",
+    src: "/images/output/couple-12.webp",
     className: "landscape",
   },
   {
-    src: "/images/output/couple-11.avif",
+    src: "/images/output/couple-11.webp",
     className: "portrait",
   },
   {
-    src: "/images/output/couple-13.avif",
+    src: "/images/output/couple-13.webp",
     className: "portrait",
   },
 
   {
-    src: "/images/output/couple-14.avif",
+    src: "/images/output/couple-14.webp",
     className: "landscape",
   },
   {
-    src: "/images/output/couple-09.avif",
+    src: "/images/output/couple-09.webp",
     className: "portrait",
   },
   {
-    src: "/images/output/couple-17.avif",
+    src: "/images/output/couple-17.webp",
     className: "square",
   },
   {
-    src: "/images/output/couple-16.avif",
+    src: "/images/output/couple-16.webp",
     className: "landscape",
   },
   {
-    src: "/images/output/bridesmaids-ps.avif",
+    src: "/images/output/bridesmaids-ps.webp",
     className: "large",
   },
 ];
