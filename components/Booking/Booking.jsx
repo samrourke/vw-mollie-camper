@@ -1,6 +1,40 @@
+"use client";
+
 import styles from "./Booking.module.css";
 
 export default function Booking() {
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]),
+      )
+      .join("&");
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const formData = new FormData(form);
+
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: encode(data),
+      });
+
+      window.location.href = "/thank-you";
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <section className={styles.section} id="contact">
       <div className={styles.texture} />
@@ -56,12 +90,10 @@ export default function Booking() {
               {/* <div className={styles.ribbon}>Start your enquiry</div> */}
 
               <form
-                className={styles.form}
                 name="booking"
-                method="POST"
-                netlify
                 data-netlify="true"
                 netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
               >
                 {/*Hidden Input for Netlify - do not use self closing tags */}
                 <input type="hidden" name="form-name" value="booking"></input>
