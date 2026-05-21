@@ -55,7 +55,22 @@ export default function Booking() {
             <div className={styles.formCard}>
               {/* <div className={styles.ribbon}>Start your enquiry</div> */}
 
-              <form className={styles.form}>
+              <form
+                className={styles.form}
+                name="booking"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                action="/thank-you"
+              >
+                {/* Required hidden input for Netlify */}
+                <input type="hidden" name="form-name" value="booking" />
+
+                {/* Honeypot anti-spam field */}
+                <div hidden>
+                  <input name="bot-field" />
+                </div>
+
                 <div className={styles.fieldGrid}>
                   <div className={styles.field}>
                     <label htmlFor="name">Name</label>
@@ -64,6 +79,7 @@ export default function Booking() {
                       name="name"
                       type="text"
                       placeholder="Your name"
+                      required
                     />
                   </div>
 
@@ -74,6 +90,7 @@ export default function Booking() {
                       name="email"
                       type="email"
                       placeholder="you@example.com"
+                      required
                     />
                   </div>
                 </div>
@@ -91,7 +108,12 @@ export default function Booking() {
 
                   <div className={styles.field}>
                     <label htmlFor="bookingType">Booking type</label>
-                    <select id="bookingType" name="bookingType" defaultValue="">
+                    <select
+                      id="bookingType"
+                      name="bookingType"
+                      defaultValue=""
+                      required
+                    >
                       <option value="" disabled>
                         Select one
                       </option>
@@ -120,14 +142,16 @@ export default function Booking() {
                     name="message"
                     rows="6"
                     placeholder="Tell us a little about your plans..."
+                    required
                   />
                 </div>
 
                 <button type="submit" className={styles.submitButton}>
                   Send enquiry
                 </button>
+
                 <div className={styles.logoDiv}>
-                  <img src="/icon.png" className={styles.logo} />
+                  <img src="/icon.png" className={styles.logo} alt="Logo" />
                 </div>
               </form>
             </div>
