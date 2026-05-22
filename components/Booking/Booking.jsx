@@ -13,22 +13,14 @@ export default function Booking() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const form = e.target;
-
-    const formData = new FormData(form);
-
-    const data = Object.fromEntries(formData.entries());
 
     try {
       await fetch("/", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: encode(data),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString(), // ✅ correct encoding
       });
-
       window.location.href = "/thank-you";
     } catch (error) {
       console.error(error);
