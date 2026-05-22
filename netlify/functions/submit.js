@@ -16,7 +16,7 @@ export default async (req, context) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "bookings@rockthebus.co.uk",
+      from: "onboarding@resend.dev",
       to: "samrourke@gmail.com",
       reply_to: email,
       subject: `New booking enquiry from ${name}`,
