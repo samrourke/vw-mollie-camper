@@ -1,6 +1,2 @@
-[[redirects]]
-  from = "/submit"
-  to = "/"
-  status = 200
-  force = true
-  conditions = {Method = ["POST"]}
+[functions]
+  directory = "netlify/functions"
