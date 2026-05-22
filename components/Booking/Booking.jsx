@@ -16,10 +16,11 @@ export default function Booking() {
     const form = e.target;
 
     try {
-      await fetch("/", {
+      await fetch("/submit", {
+        // 👈 change this
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(new FormData(form)).toString(), // ✅ correct encoding
+        body: new URLSearchParams(new FormData(form)).toString(),
       });
       window.location.href = "/thank-you";
     } catch (error) {
