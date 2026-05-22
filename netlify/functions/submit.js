@@ -5,6 +5,7 @@ export default async (req, context) => {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
+      "X-Netlify-Form-Submit": "true",
     },
     body,
   });
