@@ -2,7 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [], // add external image domains if needed
+    domains: [],
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/submit",
+        destination: "/",
+      },
+    ];
   },
 };
 
