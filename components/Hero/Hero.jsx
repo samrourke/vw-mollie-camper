@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="home">
       <div className={styles.banner}>
         <div className={styles.overlay}></div>
 

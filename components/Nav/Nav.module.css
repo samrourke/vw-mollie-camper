@@ -140,7 +140,7 @@
   font-size: 1.5rem;
 }
 
-.navLeft li::after, .navRight li::after {
+.li::after {
   content: "";
   position: absolute;
   bottom: -3px;
@@ -153,7 +153,7 @@
   transition: transform 0.3s ease;
 }
 
-.desktopNav li:hover::after {
+.li:hover::after, .li.active::after {
   transform: scaleX(1);
 }
 

@@ -5,39 +5,32 @@ import Link from "next/link";
 import gsap from "gsap";
 import styles from "./Nav.module.css";
 
-/**
- * Generic Navbar Template
- * -----------------------
- * - Desktop: static inline nav
- * - Mobile: animated overlay using GSAP
- * - Toggle button auto-closes on resize > breakpoint
- */
-
 export default function Navbar({
   logo = "/icon.png",
   links = [
-    { href: "/", label: "Home" },
-    { href: "/#meet-mollie", label: "Mollie" },
-    { href: "/#about", label: "About" },
+    { href: "/", label: "Home", id: "home" },
+    { href: "/#meet-mollie", label: "Mollie", id: "meet-mollie" },
+    { href: "/#about", label: "About", id: "about" },
 
     { href: "/", label: "Logo", image: "/icon.png" },
-    { href: "/#reviews", label: "Reviews" },
+    { href: "/#reviews", label: "Reviews", id: "reviews" },
     // { href: "/#reviews", label: "Reviews" },
-    { href: "/#gallery", label: "Gallery" },
-    { href: "/#contact", label: "Contact" },
+    { href: "/#gallery", label: "Gallery", id: "gallery" },
+    { href: "/#contact", label: "Contact", id: "contact" },
   ],
   accentColor = "var(--teal)",
   breakpoint = 860,
 }) {
   const linksLeft = links.slice(0, 3);
   const linksRight = links.slice(4);
-  console.log("Left Links:", linksLeft);
-  console.log("Right Links:", linksRight);
 
   const [isOpen, setIsOpen] = useState(false);
   const [width, setWidth] = useState(0);
+  const [activeSection, setActiveSection] = useState("/");
   const mobileMenuRef = useRef(null);
   const tl = useRef(null);
+
+  console.log("Active section:", activeSection); // Debug log for active section
 
   // Track viewport width
   useEffect(() => {
@@ -80,6 +73,24 @@ export default function Navbar({
     isOpen ? tl.current.play() : tl.current.reverse();
   }, [isOpen]);
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = Array.from(entries).find(
+          (entry) => entry.isIntersecting,
+        )?.target;
+        if (visibleSection) setActiveSection(visibleSection.id);
+      },
+      { root: null, threshold: 0.3 },
+    );
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
   return (
     <nav className={styles.navbar}>
       <button
@@ -101,7 +112,10 @@ export default function Navbar({
       <div className={styles.desktopNav}>
         <ul className={styles.navLeft}>
           {linksLeft.map((link, i) => (
-            <li key={`desktopL${i}`}>
+            <li
+              key={`desktopL${i}`}
+              className={`${styles.li} ${activeSection === link.id ? styles.active : ""}`}
+            >
               <Link href={link.href}>
                 <h3>{link.label}</h3>
               </Link>
@@ -113,7 +127,10 @@ export default function Navbar({
         </Link>
         <ul className={styles.navRight}>
           {linksRight.map((link, i) => (
-            <li key={`desktopR${i}`}>
+            <li
+              key={`desktopR${i}`}
+              className={`${styles.li} ${activeSection === link.id ? styles.active : ""}`}
+            >
               <Link href={link.href}>
                 <h3>{link.label}</h3>
               </Link>

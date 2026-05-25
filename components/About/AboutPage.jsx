@@ -55,71 +55,71 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
-      <section className={`${styles.storySection} ${styles.offerSection}`}>
-        <div
-          // style={{
-          //   display: "flex",
-          //   alignItems: "flex-end",
-          //   justifyContent: "flex-end",
-          //   width: " min(1200px, calc(100% - 3rem))",
-          //   margin: "0 auto",
-          // }}
-          id={styles.subtitleSecond}
-        >
-          {" "}
-          <h2 className="sectionTitle">What We Offer</h2>
-        </div>
+        <div className={`${styles.storySection} ${styles.offerSection}`}>
+          <div
+            // style={{
+            //   display: "flex",
+            //   alignItems: "flex-end",
+            //   justifyContent: "flex-end",
+            //   width: " min(1200px, calc(100% - 3rem))",
+            //   margin: "0 auto",
+            // }}
+            id={styles.subtitleSecond}
+          >
+            {" "}
+            <h2 className="sectionTitle">What We Offer</h2>
+          </div>
 
-        <div className={styles.sectionTextureBottom} />
-        <div className={styles.container}>
-          <div className={`${styles.storyGrid} ${styles.reverse}`}>
-            <div className={styles.mediaWrap}>
-              <div className={styles.whatRibbon}>
-                <img
-                  className={styles.bannerImg}
-                  src="/images/what-banner.png"
-                />
+          <div className={styles.sectionTextureBottom} />
+          <div className={styles.container}>
+            <div className={`${styles.storyGrid} ${styles.reverse}`}>
+              <div className={styles.mediaWrap}>
+                <div className={styles.whatRibbon}>
+                  <img
+                    className={styles.bannerImg}
+                    src="/images/what-banner.png"
+                  />
+                </div>
+                <div className={styles.imageCard}>
+                  <Image
+                    src="/images/output/champagne-01.webp"
+                    alt="Classic VW wedding camper van ready for a special occasion"
+                    fill
+                    className={styles.image}
+                    id={styles.logoSecond}
+                  />
+                </div>
               </div>
-              <div className={styles.imageCard}>
-                <Image
-                  src="/images/output/champagne-01.webp"
-                  alt="Classic VW wedding camper van ready for a special occasion"
-                  fill
-                  className={styles.image}
-                  id={styles.logoSecond}
-                />
-              </div>
-            </div>
 
-            <div className={styles.storyCopy}>
-              <p>
-                Mollie is here to make your day feel calm, special and just that
-                little bit more unique.
-              </p>
-              <p>
-                Mollie shall pick up those to be wed along with any special
-                friends for a smooth, calm and stress-free journey to the
-                ceremony. We like to give everyone a moment here to breathe and
-                enjoy the journey.
-              </p>
-              <p>
-                Mollie would love you to toast your special day so please feel
-                free to bring a bottle of your favourite tipple and we shall
-                supply the rest.
-              </p>
-              <p>
-                Afterwards, she can whisk the newlyweds off to the celebration
-                and then she can stay a while longer for photographs. Mollie
-                loves being part of the occasion and is always very happy to
-                have her picture taken.
-              </p>
-              <div className={styles.logoContainer} id={styles.logoSecond}>
-                <img
-                  src="/icon.png"
-                  alt="Rock The Bus logo"
-                  className={styles.logo}
-                />
+              <div className={styles.storyCopy}>
+                <p>
+                  Mollie is here to make your day feel calm, special and just
+                  that little bit more unique.
+                </p>
+                <p>
+                  Mollie shall pick up those to be wed along with any special
+                  friends for a smooth, calm and stress-free journey to the
+                  ceremony. We like to give everyone a moment here to breathe
+                  and enjoy the journey.
+                </p>
+                <p>
+                  Mollie would love you to toast your special day so please feel
+                  free to bring a bottle of your favourite tipple and we shall
+                  supply the rest.
+                </p>
+                <p>
+                  Afterwards, she can whisk the newlyweds off to the celebration
+                  and then she can stay a while longer for photographs. Mollie
+                  loves being part of the occasion and is always very happy to
+                  have her picture taken.
+                </p>
+                <div className={styles.logoContainer} id={styles.logoSecond}>
+                  <img
+                    src="/icon.png"
+                    alt="Rock The Bus logo"
+                    className={styles.logo}
+                  />
+                </div>
               </div>
             </div>
           </div>
