@@ -183,6 +183,8 @@
     align-items: center;
     gap:2rem;
     transform: translateY(10%);
+    pointer-events: none;
+ 
 
   }
   .mobileLogo{
