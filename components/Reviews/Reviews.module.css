@@ -38,6 +38,10 @@
   gap: 2rem;
 }
 
+ /*
+    delete the below settings when more reviews are in
+    */
+
  .reviewsGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -60,6 +64,9 @@
     transform 0.4s ease,
     border-color 0.4s ease,
     background 0.4s ease;
+    /*
+    Changes below settings when more reviews are in
+    */
     max-width: 500px;
     margin: 0 auto;
 }
