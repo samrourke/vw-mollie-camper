@@ -10,6 +10,31 @@ const work_sans = Work_Sans({
   variable: "--work-sans",
 });
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "WeddingService",
+
+  name: "Rock The Bus",
+
+  image: "https://rockthebus.co.uk/images/output/couple-18.avif",
+
+  url: "https://rockthebus.co.uk",
+
+  description: "Vintage Volkswagen camper wedding hire across South London.",
+
+  areaServed: {
+    "@type": "Place",
+    name: "South London",
+  },
+
+  priceRange: "£450 - £750",
+
+  // sameAs: [
+  //   "https://www.instagram.com/yourprofile",
+  //   "https://www.facebook.com/yourprofile",
+  // ],
+};
+
 export const metadata = {
   title: "Vintage VW Wedding Bus Hire in South London | Rock The Bus",
   description:
