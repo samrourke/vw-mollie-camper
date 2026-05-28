@@ -42,6 +42,7 @@ export default function AboutPage() {
                 <img
                   className={styles.bannerImg}
                   src="/images/who-banner.png"
+                  alt="banner image with text saying 'Who We Are'"
                 />
               </div>
               <div className={styles.imageCard}>
@@ -78,6 +79,7 @@ export default function AboutPage() {
                   <img
                     className={styles.bannerImg}
                     src="/images/what-banner.png"
+                    alt="banner image with text saying 'What We Do'"
                   />
                 </div>
                 <div className={styles.imageCard}>

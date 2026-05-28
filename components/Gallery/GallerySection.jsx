@@ -104,7 +104,7 @@ export default function GallerySection() {
           <div key={index} className={`${styles.item} reveal`}>
             <Image
               src={image.src}
-              alt=""
+              alt="Gallery Image of a vintage VW camper van on a wedding day"
               width={1200}
               height={800}
               className={styles.img}
