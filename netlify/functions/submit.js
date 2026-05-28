@@ -20,7 +20,7 @@ export default async (req, context) => {
       from: "bookings@rockthebus.co.uk",
       to: "samrourke@gmail.com",
       reply_to: email,
-      subject: `New booking enquiry from ${name}`,
+      subject: `New booking enquiry from ${name} - ${new Date().toLocaleDateString("en-GB")}`,
       html: `
         <h2>New Booking Enquiry</h2>
         <p><strong>Name:</strong> ${name}</p>
