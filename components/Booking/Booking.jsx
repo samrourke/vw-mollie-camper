@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./Booking.module.css";
+import Footer from "../Footer/Footer";
 
 export default function Booking() {
   const encode = (data) => {
@@ -184,6 +185,7 @@ export default function Booking() {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 }

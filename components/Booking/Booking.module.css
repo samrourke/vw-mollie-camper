@@ -1,7 +1,7 @@
 .section {
   position: relative;
   overflow: visible;
-  padding: 200px clamp(4rem, 7vw, 7rem);
+  padding: 200px clamp(4rem, 7vw, 7rem) 50px;
   background:
     linear-gradient(
       135deg,
