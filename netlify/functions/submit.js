@@ -18,7 +18,7 @@ export default async (req, context) => {
     body: JSON.stringify({
       // from: "onboarding@resend.dev",
       from: "bookings@rockthebus.co.uk",
-      to: "samrourke@gmail.com",
+      to: "andy@rockthebus.co.uk",
       reply_to: email,
       subject: `New booking enquiry from ${name} - ${new Date().toLocaleDateString("en-GB")}`,
       html: `
